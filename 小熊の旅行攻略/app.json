@@ -1,0 +1,50 @@
+{
+  "pages":[
+    
+    "pages/index/index",   
+    "pages/destination/destination",
+    "pages/find/find",
+    "pages/mine/mine",
+    "pages/nearby/nearby",
+    "pages/search/search",
+    "pages/destination/cityView/cityView",
+    "pages/index/view-list/view-list",
+    "pages/index/view-detail/view-detail",
+    "pages/mine/modify-info/modify-info"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#49BAE0",
+    "navigationBarTitleText": "小熊の游玩攻略",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/nav/mark.png",
+        "selectedIconPath": "img/nav/markHL.png"
+      },
+      {
+        "pagePath": "pages/destination/destination",
+        "text": "目的地",
+        "iconPath": "img/tabbar/navbar/destination.png",
+        "selectedIconPath": "img/tabbar/navbar/destination_active.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "img/tabbar/navbar/find.png",
+        "selectedIconPath": "img/tabbar/navbar/find_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/nav/mine.png",
+        "selectedIconPath": "img/nav/mineHL.png"
+      }
+    ]
+  }
+ 
+}

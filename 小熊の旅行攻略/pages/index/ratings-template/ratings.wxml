@@ -1,0 +1,25 @@
+<!--评论组件-->
+<import src="star-template/star.wxml" />
+<template name="ratings">
+  <view class="ratings-content">
+    <view class="ratings-header">
+      <view class="ratings-header-img">
+        <image src="{{ratings[0].imgUrl}}"></image>
+        <text>lv.2</text>
+      </view>
+      <view class="ratings-header-name">
+        <text class="username">{{ratings[0].username}}</text>
+        <view class="star-wrapper">
+          <template is="star" data="{{ratings}}"></template>
+        </view>
+      </view>
+      <text class="ratings-header-time">{{ratings[0].date}}</text>
+    </view>
+    <view class="ratings-body">
+      <text>{{ratings[0].content}}</text>
+      <view wx:for="{{ratings.viewImg}}"wx:key="{{index}}">
+        <image src="{{item}}" ></image>
+      </view>
+    </view>
+  </view>
+</template>

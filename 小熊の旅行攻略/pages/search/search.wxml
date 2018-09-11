@@ -1,0 +1,20 @@
+<!--pages/search/search.wxml-->
+<view wx:if="{{!success}}" class='box'>
+  <view class='row'>
+    <label class='title'>我的位置</label> 
+    <view class='info' bindtap='handleAddressClick'>{{address}}</view>
+  </view>
+  <!-- 确认按钮 -->
+  <view>
+    <button type='primary' bindtap='handleSubmit'>点击确认</button>
+  </view>
+</view>
+
+<!-- login -->
+<view wx:if="{{success}}" class='success' >
+  <view class='congratulation'>
+    <icon type='success' size='24' class='success-icon' />
+    定位成功
+  </view>
+  <button class='backhome-button' bindtap='handleBackTap'>返回附近</button>
+</view>

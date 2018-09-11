@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<import src="view-list-template/view-list.wxml" />
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{1}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image swiper-img" lazy-load="true"	/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="container">
+<view class="category">
+    <view class="view box" bindtap="enterViewList" id='1'>
+      <image src="/img/images/home/view.png"></image>
+      <view class="icon icon1">
+        <view>
+          <text style='background: url(../../img/images/home/img.png) no-repeat -75.04rpx 0;background-size: cover;'></text>
+        </view>
+      </view>
+      <text class="title">景点</text>
+    </view>
+    <view class="view box" bindtap="enterViewList" id='2' >
+      <image src="/img/images/home/ticket.png"></image>
+      <view class="icon">
+        <view>
+          <text style='background: url(../../img/images/home/img.png) no-repeat;background-size: cover;'></text>
+        </view>
+      </view>
+      <text class="title">门票</text>
+    </view>
+    <view class="view box" bindtap="enterViewList" id='3'>
+      <image src="/img/images/home/hotel.png"></image>
+      <view class="icon">
+        <view>
+          <text style='background: url(../../img/images/home/img.png) no-repeat;background-size: cover;'></text>
+        </view>
+      </view>
+      <text class="title">酒店</text>
+    </view>
+    <view class="view box" bindtap="enterViewList" id='4'>
+      <image src="/img/images/home/food.png"></image>
+      <view class="icon">
+        <view>
+          <text style='background: url(../../img/images/home/img.png) no-repeat;background-size: cover;'></text>
+        </view>
+      </view>
+      <text class="title">美食</text>
+    </view>
+  </view>
+  <!--目的地推荐-->
+  <view class="slide">
+    <view class="title">
+      <text>目的地推荐 </text>
+      <text>精选推荐好玩的景区、城市</text>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval2}}" duration="{{duration}}">
+      <block wx:for="{{viewHot}}" wx:key="{{1}}">
+        <swiper-item>
+          <view class="slide-image">
+            <view class="image-wrapper">
+              <view wx:for="{{item.imgs}}" wx:key="{{index}}" bindtap="enterDetail" data-id="{{item.sid}}">
+                <image src="{{item.imgurl}}" lazy-load="true"></image>
+                <text>{{item.title}}</text>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    
+    <view class="tag">
+      <text wx:for="{{cityHot}}" data-index='{{index}}' wx:key="{{index}}" bindtap='chooseType' class='{{index}}'>{{item.cityName}}</text>
+      <text>更多</text>
+    </view>
+  </view>
+
+  <!-- hot-view -->
+  <view class="hot-view">
+    <view class="tab">
+      <view bindtap="getaroundView">
+        <text wx:if="{{active}}" class="active" >周边游</text>
+        <text wx:else>周边游</text>
+      </view>
+      <view bindtap="getcountryView">
+        <text wx:if="{{!active}}" class="active">国内热门</text>
+        <text wx:else>国内热门</text>
+      </view>
+    </view>
+    <view>
+      <!-- <image src="http://cdn.uedna.com/201406/1403235346297_1140x0.gif"  wx:if="{{loading}}"></image> -->
+      <view wx:for="{{viewList}}" wx:key="{{index}}" >
+        <template is="viewList" data="{{...item}}"></template>
+        <view class="fill"></view>
+      </view>
+    </view>
+  </view>
+  
+</view>

@@ -1,0 +1,39 @@
+<!--pages/find/find.wxml-->
+<view class='find'>
+  <view class='nav-bar'>
+    <view class="tab">
+      <text class="{{active==0?'active':''}}" bindtap="hotClick">热门</text>
+      <text class="{{active==1?'active':''}}" bindtap="aroundClick">周边</text>
+      <text class="{{active==2?'active':''}}" bindtap="hongkongClick">香港</text>
+      <text class="{{active==3?'active':''}}" bindtap="aomenClick">澳门</text>
+      <text class="icon" style='background: url(/img/images/find/more.png) no-repeat 6rpx 2rpx;'></text>
+    </view>
+  </view>
+
+  <view class="view-box">
+    <view class="view">
+      <view class="img">
+        <text class="title">晚霞下的古河湖</text>
+        <image src="http://img1.imgtn.bdimg.com/it/u=350842285,1764464892&fm=27&gp=0.jpg"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title">金沙江大拐弯</text>
+        <image src="https://o9meekf53.qnssl.com/images/fd/tg/g5/M02/F6/14/CggYsFbKOzGAVmqiAASn4iojteA005.jpg!wf640"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title">最美在普者黑</text>
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536051167400&di=f6bc82a451dcb7d57203fdd412f61262&imgtype=0&src=http%3A%2F%2Fs11.sinaimg.cn%2Fmw690%2F001srBEhzy6UbUywtya9a%26690"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title">禾木西部最北端的乡</text>
+        <image src="//pic5.40017.cn/02/001/d6/df/rBANDFr2jnSAG32NAAJ9zM-Yo8c059_530x266_00.jpg"></image>
+      </view>
+    </view>
+  </view>
+</view>

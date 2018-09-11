@@ -1,0 +1,37 @@
+/* pages/search/search.wxss */
+page{
+  background: #f1f1f1;
+}
+.box{
+
+}
+.row{
+  line-height: 100rpx;
+  background: white;
+  border-bottom: 1px solid #e1e1e1;
+  overflow: hidden;
+}
+.title{
+  width: 180rpx;
+  padding-left: 20rpx;
+  float: left;
+}
+button{
+  margin: 10px;
+}
+.success{
+  background: #fff;
+  padding-bottom: 40rpx;
+}
+.congratulation{
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 62rpx;
+  color: rgb(36, 137, 252);
+}
+.backhome-button{
+  margin: 20rpx;
+  background: #49BAE0;
+  color: white;
+  border: none;
+}

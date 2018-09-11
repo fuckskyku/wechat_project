@@ -1,0 +1,125 @@
+<!--景点详情页-->
+<import src="../ratings-template/ratings.wxml" />
+<view class="view-detail">
+
+  <!--选项卡-->
+  <view class="top">
+    <view bindtap="productClick">
+      <text class="{{active==0?'active':''}}">产品</text>
+    </view>
+    <view bindtap="detailClick">
+      <text class="{{active==1?'active':''}}">详情</text>
+    </view>
+    <view bindtap="ratingClick">
+      <text class="{{active==2?'active':''}}">评价</text>
+    </view>
+  </view>
+  <!--轮播-->
+  <view class='box'>
+    <view class='img'>
+      <view class='box-title'></view>
+     <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{details}}" wx:key="{{1}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+      <text class="mask"></text>
+    </swiper>
+    </view>
+  </view>
+  <!-- 详情 -->
+  <view class="desc">
+    <view>
+      <text class="title"> {{detailView.title}}</text>
+      <text class="info">{{detailView.desc}}</text>
+    </view>
+    <view class="share">
+      <text class="icon" style='background: url(/img/images/home/view_detail.png) no-repeat;'></text>
+      <text>分享</text>
+    </view>
+  </view>
+  <!-- 日期 -->
+  <view class="pos">
+    <text class="icon" style='background: url(/img/images/home/view_detail.png) no-repeat;'></text>
+    <view>
+      <text class="pos-title">{{detailView.pos}}</text>
+      <view class="other">
+        <text>{{date[0].month}}月{{date[0].day}}日</text>
+        <text>17℃-23℃</text>
+        <text>晴</text>
+      </view>
+    </view>
+  </view>
+  <!-- 日期 -->
+  <view class="date-wrapper">
+    <view class="date active">
+      <text>不限</text>
+      <text>日期</text>
+    </view>
+    <view class="date" wx:for="{{date}}" wx:key="{{index}}">
+      <text>星期{{item.week}}</text>
+      <text wx:if="{{item.today}}">今天</text>
+      <text wx:elif="{{item.tomorrow}}">明天</text>
+      <text wx:else>{{item.month}}月{{item.day}}日</text>
+    </view>
+  </view>
+  <!-- 套餐 -->
+  <view class="price">
+    <text class="name">丘北普者黑风景区成人票1张</text>
+    <view class="detail">
+      <view>
+        <text>￥{{detailView.price}}</text>
+        <text>起</text>
+      </view>
+      <text class="decre"> {{detailView.preferential}}</text>
+      <text class="order">抢购</text>
+    </view>
+    <view class="info">
+      <text>套餐说明</text>
+      <text style='background: url(/img/images/home/view_detail.png) no-repeat;'></text>
+    </view>
+  </view>
+
+  <!--优惠-->
+  <view class="preferential">
+    <text></text>
+    <text>景点/酒店附近的套餐</text>
+    <text>查看优惠</text>
+    <text></text>
+  </view>
+
+  <!--评论-->
+  <view class="ratings ratings-need-common">
+    <view class="ratings-title">
+      <text></text>
+      <text>游客评价</text>
+      <text></text>
+    </view>
+    <template is="ratings" data="{{ratings}}"></template>
+    <view class="more-ratings-btn">
+      <text>查看全部评论({{detailView.ratings.length}}条)</text>
+    </view>
+  </view>
+
+  <!--购票须知-->
+  <view class="need ratings-need-common">
+    <view class="ratings-title">
+      <text></text>
+      <text>购票须知</text>
+      <text></text>
+    </view>
+    <view class="content">
+      <view wx:for="{{detailView.needKown}}" wx:key="{{index}}">
+        <text class="name">{{item.title}}</text>
+        <view class="text">
+          <text>{{item.limitation}}</text>
+          <text>{{item.usageMode}}</text>
+          <text>{{item.usageDte}}</text>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

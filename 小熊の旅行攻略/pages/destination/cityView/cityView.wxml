@@ -1,0 +1,97 @@
+
+<!--pages/destination/cityView/cityView.wxml-->
+<view class="tab">
+  <view>
+    <text>推荐排序</text>
+    <text class="icon" style='background: url(/img/images/destination/tab_icon.png) no-repeat 0 0;'></text>
+  </view>
+  <view>
+    <text>全部分类</text>
+    <text class="icon" style='background: url(/img/images/destination/tab_icon.png) no-repeat 0 0;'></text>
+  </view>
+  <view>
+    <text>筛选</text>
+    <text class="icon" style='background: url(/img/images/destination/tab_icon.png) no-repeat 0 0;'></text>
+  </view>
+</view>
+
+<!--景点-->
+<view class="view-box">
+
+  <!--此处应循环数据-->
+  <view class="view">
+    <image src="/img/images/destination/view.png" class="img"></image>
+    <view class="info">
+      <text class="title">丘北普者黑风景区</text>
+      <text class="desc">位于云南省文山壮族苗族自治州丘北县境内，距县城13公里，是国家级风景名胜区。</text>
+      <view class="price">
+        <text class="new-price">￥218</text>
+        <view class="old-price">
+          <text>￥250</text>
+          <text class="line"></text>
+        </view>
+        <text class="seller">已售126</text>
+      </view>
+    </view>
+  </view>
+  <view class="view">
+    <image src="/img/images/destination/view1.png" class="img"></image>
+    <view class="info">
+      <text class="title">大理三塔</text>
+      <text class="desc">崇圣寺三塔位于大理古城西北部1.5公里处，西对苍山应乐峰，东对洱海，距山脚约为1500米。</text>
+      <view class="price">
+        <text class="new-price">￥128</text>
+        <view class="old-price">
+          <text>￥155</text>
+          <text class="line"></text>
+        </view>
+        <text class="seller">已售525</text>
+      </view>
+    </view>
+  </view>
+  <view class="view">
+    <image src="/img/images/destination/view2.png" class="img"></image>
+    <view class="info">
+      <text class="title">丽江古城</text>
+      <text class="desc">丽江古城位于云南省丽江市古城区，又名大研镇，坐落在丽江坝中部，始建于宋末元初（公元13世纪后期），地处云贵高原，面积为7.279平方公里。</text>
+      <view class="price">
+        <text class="new-price">￥360</text>
+        <view class="old-price">
+          <text>￥382</text>
+          <text class="line"></text>
+        </view>
+        <text class="seller">已售252</text>
+      </view>
+    </view>
+  </view>
+  <view class="view">
+    <image src="/img/images/destination/view3.png" class="img"></image>
+    <view class="info">
+      <text class="title">昆明石林</text>
+      <text class="desc">石林风景区（Stone Forest Scenic）：世界自然遗产，世界地质公园，国家AAAAA级旅游景区，国家重点风景名胜区，国家地质公园，全国文明风景旅游区，最佳资源保护中国十大风景名胜区。</text>
+      <view class="price">
+        <text class="new-price">￥418</text>
+        <view class="old-price">
+          <text>￥460</text>
+          <text class="line"></text>
+        </view>
+        <text class="seller">已售542</text>
+      </view>
+    </view>
+  </view>
+  <view class="view">
+    <image src="/img/images/destination/view4.png" class="img"></image>
+    <view class="info">
+      <text class="title">丘北普者黑风景区</text>
+      <text class="desc">位于云南省文山壮族苗族自治州丘北县境内，距县城13公里，是国家级风景名胜区。</text>
+      <view class="price">
+        <text class="new-price">￥218</text>
+        <view class="old-price">
+          <text>￥250</text>
+          <text class="line"></text>
+        </view>
+        <text class="seller">已售500</text>
+      </view>
+    </view>
+  </view>
+</view>

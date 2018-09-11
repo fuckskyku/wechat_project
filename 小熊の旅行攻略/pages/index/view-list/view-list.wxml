@@ -1,0 +1,40 @@
+<!--pages/index/view-list/view-list.wxml-->
+<!-- <view wx:for="{{citys}}" wx:key="{{1}}">
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{1}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper> -->
+<import src="../view-list-template/view-list.wxml" />
+
+<view class='content'>
+  <view class='box'>
+    <view class='img'>
+      <view class='title'></view>
+     <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{details}}" wx:key="{{2}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" lazy-load="true" />
+        </swiper-item>
+      </block>
+    </swiper>
+    </view>
+  </view>
+</view>
+
+
+<view class="view-box">
+  <scroll-view scroll-y="true" style="height: 1335px" bindscrolltolower="lower" bindscroll="scroll">
+    <view wx:for="{{viewList}}" wx:key="{{index}}" wx:if="{{!loading}}" animation="{{animationData}}">
+       <view class="fill"></view>
+      <template is="viewList" data="{{...item}}"></template>
+    </view>
+    </scroll-view>
+  <view wx:if="{{showMore}}" class="showmore">
+    <text>没有更多了</text>
+  </view>  
+</view>
